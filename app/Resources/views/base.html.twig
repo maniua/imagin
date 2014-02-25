@@ -2,12 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        {% block stylesheets %}
+            {% stylesheets '@bootstrap_css' combine=true %}
+                <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+            {% endstylesheets %}
+        {% endblock %}
+        {% block javascripts %}
+	        {% javascripts '@jquery_js' '@bootstrap_js' combine=true %}
+	            <script src="{{ asset_url }}"></script>
+	        {% endjavascripts %}
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
     </body>
 </html>

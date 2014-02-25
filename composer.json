@@ -18,22 +18,38 @@
         "sensio/distribution-bundle": "~2.3",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "symfony/assetic-bundle": "*",
+        "jquery/jquery": "1.9-stable"
     },
     "scripts": {
+        "pre-install-cmd": [
+            "cd vendor/jquery/jquery && npm install",
+            "echo 'Change rights on cache directory' && sudo chmod 777 -R app/cache",
+            "echo 'Change rights on logs directory' && sudo chmod 777 -R app/logs"
+        ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "cd vendor/jquery/jquery && grunt dist:../../../app/Resources/public/vendor/jquery/js/",
+            "php app/console assetic:dump",
+            "echo 'Change rights on cache directory' && sudo chmod 777 -R app/cache"
+        ],
+        "pre-update-cmd": [
+            "echo 'Change rights on cache directory' && sudo chmod 777 -R app/cache"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "cd vendor/jquery/jquery && grunt dist:../../../app/Resources/public/vendor/jquery/js/",
+            "php app/console assetic:dump",
+            "echo 'Change rights on cache directory' && sudo chmod 777 -R app/cache"
         ]
     },
     "config": {

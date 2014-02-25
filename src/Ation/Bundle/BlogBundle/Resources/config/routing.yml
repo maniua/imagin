@@ -1,0 +1,3 @@
+ation_blog_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AtionBlogBundle:Default:index }

@@ -1,0 +1,4 @@
+ation_blog:
+    resource: "@AtionBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
