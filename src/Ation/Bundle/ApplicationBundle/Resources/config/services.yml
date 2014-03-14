@@ -1,0 +1,7 @@
+parameters:
+#    ation_application.example.class: Ation\Bundle\ApplicationBundle\Example
+
+services:
+#    ation_application.example:
+#        class: %ation_application.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

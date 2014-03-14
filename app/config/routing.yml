@@ -1,3 +1,15 @@
+ation_application:
+    resource: "@AtionApplicationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+man_cms:
+    resource: "@ManCmsBundle/Resources/config/routing.yml"
+    prefix:   /cms
+
+man_api:
+    resource: "@ManApiBundle/Resources/config/routing.yml"
+    prefix:   /api
+
 ation_blog:
     resource: "@AtionBlogBundle/Resources/config/routing.yml"
     prefix:   /blog

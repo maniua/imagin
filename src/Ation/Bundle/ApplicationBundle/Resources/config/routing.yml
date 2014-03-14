@@ -1,0 +1,3 @@
+ation_application_homepage:
+    pattern:  /
+    defaults: { _controller: "AtionApplicationBundle:Default:index" }

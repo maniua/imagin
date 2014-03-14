@@ -20,7 +20,25 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "symfony/assetic-bundle": "*",
-        "jquery/jquery": "1.9-stable"
+        "jquery/jquery": "1.9-stable",
+        "symfony-cmf/symfony-cmf": "1.0.*",
+        "symfony-cmf/simple-cms-bundle": "1.0.*",
+        "symfony-cmf/create-bundle": "1.0.*",
+        
+        "symfony-cmf/routing-auto-bundle": "1.0.*@alpha",
+        "symfony-cmf/menu-bundle": "1.0",
+        "sonata-project/doctrine-phpcr-admin-bundle": "dev-master",
+        "symfony-cmf/tree-browser-bundle": "@dev",
+        "doctrine/data-fixtures": "1.0.0",
+
+        "doctrine/phpcr-odm": "dev-master as 1.0.0",
+        "phpcr/phpcr-utils": "dev-master as 1.0.0",
+        "doctrine/phpcr-bundle": "dev-master as 1.0.0",
+        
+        "jackalope/jackalope-jackrabbit": "1.0.*",
+        "doctrine/phpcr-bundle": "1.0.*",
+        "doctrine/data-fixtures": "1.0.0",
+        "friendsofsymfony/jsrouting-bundle": "@stable"
     },
     "scripts": {
         "pre-install-cmd": [

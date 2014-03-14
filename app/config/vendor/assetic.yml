@@ -3,11 +3,11 @@ assetic:
   assets:
     jquery_js:
         inputs:
-            - '%kernel.root_dir%/Resources/public/vendor/jquery/js/jquery.js'
+            - "%kernel.root_dir%/Resources/public/vendor/jquery/js/jquery.js"
     bootstrap_css:
         inputs:
-            - '%kernel.root_dir%/Resources/public/vendor/bootstrap/css/bootstrap.css'
-            - '%kernel.root_dir%/Resources/public/vendor/bootstrap/css/bootstrap-responsive.css'
+            - "%kernel.root_dir%/Resources/public/vendor/bootstrap/css/bootstrap.css"
+            - "%kernel.root_dir%/Resources/public/vendor/bootstrap/css/bootstrap-responsive.css"
     bootstrap_js:
         inputs:
-            - '%kernel.root_dir%/Resources/public/vendor/bootstrap/js/bootstrap.js'
+            - "%kernel.root_dir%/Resources/public/vendor/bootstrap/js/bootstrap.js"

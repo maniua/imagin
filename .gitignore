@@ -10,3 +10,6 @@
 /bin/
 /composer.phar
 composer.lock
+.settings/
+app/phpcr/
+web/img/
